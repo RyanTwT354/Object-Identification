@@ -1,14 +1,15 @@
+img = "";
 status = "";
 objects = [];
 function preload() {
-    img = loadImage("dog_cat.jpg");
+img = loadImage("dog_cat.jpg");
 
 }
 
 function setup() {
 canvas = createCanvas(500, 500);
 canvas.center();
-ObjectDector = ml5.objectDector('cocossd'.modelLoaded);
+ObjectDector = ml5.objectDetector('cocossd',modelLoaded);
 document.getElementById("status").innerHTML = "status detecting objects";
 
 }
